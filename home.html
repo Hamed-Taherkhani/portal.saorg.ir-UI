@@ -30,9 +30,9 @@
             <li><a href="./home.html">خانه</a></li>
             <li><a href="#">اطلاع رسانی فرایندها</a></li>
             <li><a href="#">ارتباط با پشتیبانی سامانه</a></li>
-            <li services-item>
+            <li services-item id="services">
               <span>خدمات</span>
-              <ul>
+              <ul id="services-dropbox">
                 <li><a href="">بازرسی و شکایات</a></li>
                 <li><a href="">استعلام کد صحت</a></li>
                 <li><a href="">فراموشی رمز عیور</a></li>
@@ -56,7 +56,36 @@
         </button>
       </div>
     </header>
+
+    <main>
+      <div id="slider-container">
+        <button id="next-slide-btn" next-slide>
+          <img
+            src="https://img.icons8.com/external-becris-lineal-becris/40/ffffff/external-next-mintab-for-ios-becris-lineal-becris.png"
+          />
+        </button>
+        <button id="prev-slide-btn" prev-slide>
+          <img
+            src="https://img.icons8.com/external-becris-lineal-becris/40/ffffff/external-next-mintab-for-ios-becris-lineal-becris.png"
+          />
+        </button>
+        <div class="slides active">
+          <img src="./sources/1.jpg" alt="Slide" />
+        </div>
+        <div class="slides de-active">
+          <img src="./sources/2.jpg" alt="Slide" />
+        </div>
+        <div class="slides de-active">
+          <img src="./sources/3.jpg" alt="Slide" />
+        </div>
+        <div class="slides de-active">
+          <img src="./sources/4.jpg" alt="Slide" />
+        </div>
+      </div>
+    </main>
+
     <script src="./js/menu.js" defer></script>
+    <script src="./js/slider.js" defer></script>
     <script src="./js/main.js" type="module" defer></script>
   </body>
 </html>
