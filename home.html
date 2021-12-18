@@ -18,18 +18,45 @@
           <li><a href="#">ورود کاربران دانشگاه به سیستم</a></li>
         </ul>
       </nav>
-      <nav bottom-nav>
+      <div>
+        <nav menu class="minimize-menu">
+          <button id="close-menu-btn" close-menu-btn>
+            <img
+              src="https://img.icons8.com/material-outlined/48/000000/delete-sign.png"
+              alt="close"
+            />
+          </button>
+          <ul>
+            <li><a href="./home.html">خانه</a></li>
+            <li><a href="#">اطلاع رسانی فرایندها</a></li>
+            <li><a href="#">ارتباط با پشتیبانی سامانه</a></li>
+            <li services-item>
+              <span>خدمات</span>
+              <ul>
+                <li><a href="">بازرسی و شکایات</a></li>
+                <li><a href="">استعلام کد صحت</a></li>
+                <li><a href="">فراموشی رمز عیور</a></li>
+              </ul>
+            </li>
+            <li><a href="#">کارنامه سلامت دانشجویان</a></li>
+            <li><a href="#">سوالات متداول</a></li>
+            <li><a href="#">تقویم آزمون زبان</a></li>
+            <li><a href="#">English</a></li>
+          </ul>
+        </nav>
+
         <a href="./home.html">
           <img src="./sources/logo.png" alt="سازمان امور دانشجویان" />
         </a>
-        <button id="menu-btn">
+        <button id="open-menu-btn">
           <img
             src="https://img.icons8.com/material-outlined/50/000000/more.png"
             alt="More"
           />
         </button>
-      </nav>
+      </div>
     </header>
-    <script src="./js/main.js"></script>
+    <script src="./js/menu.js" defer></script>
+    <script src="./js/main.js" type="module" defer></script>
   </body>
 </html>

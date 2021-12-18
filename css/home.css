@@ -1,3 +1,11 @@
+/* font family */
+@font-face {
+  font-family: "Yekan";
+  src: url("https://cdn.fontcdn.ir/Font/Persian/Yekan/Yekan.eot");
+  src: url("https://cdn.fontcdn.ir/Font/Persian/Yekan/Yekan.eot?#iefix") format("embedded-opentype"), url("https://cdn.fontcdn.ir/Font/Persian/Yekan/Yekan.woff") format("woff"), url("https://cdn.fontcdn.ir/Font/Persian/Yekan/Yekan.ttf") format("truetype");
+  font-weight: normal;
+}
+
 * {
   -webkit-transition: 700ms ease;
   transition: 700ms ease;
@@ -14,6 +22,8 @@ body {
   max-height: -webkit-max-content;
   max-height: -moz-max-content;
   max-height: max-content;
+  position: relative;
+  font-family: Yekan, sans-serif;
 }
 
 #main-header nav[top-nav] {
@@ -40,7 +50,7 @@ body {
 #main-header nav[top-nav] ul li a {
   text-decoration: none;
   font-size: 0.8rem;
-  color: #808080;
+  color: #5a5a5a;
   border-left: 1px solid lightgray;
   padding-left: 0.5rem;
 }
@@ -54,9 +64,9 @@ body {
   padding-left: 0;
 }
 
-#main-header nav[bottom-nav] {
-  padding: 0 2rem;
+#main-header div {
   background-color: #8dd6e3;
+  padding: 0 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -72,9 +82,66 @@ body {
           align-items: center;
 }
 
-#main-header nav[bottom-nav] button {
+#main-header div button {
   border: none;
   background: transparent;
+}
+
+#main-header div nav[menu] {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+#main-header div nav[menu] button[close-menu-btn] {
+  float: left;
+  margin: 1rem;
+}
+
+#main-header div nav[menu] button[close-menu-btn] img {
+  width: 2rem;
+}
+
+#main-header div nav[menu] a,
+#main-header div nav[menu] span {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #5a5a5a;
+  font-size: 0.8rem;
+}
+
+#main-header div nav[menu] > ul {
+  padding: 1rem;
+  margin-top: 2.5rem;
+}
+
+#main-header div nav[menu] ul > li {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid lightgray;
+  cursor: pointer;
+  -webkit-transition: ease 200ms;
+  transition: ease 200ms;
+}
+
+#main-header div nav[menu] ul > li:hover {
+  background-color: #8dd6e3;
+}
+
+#main-header div nav[menu] li[services-item] ul {
+  display: none;
+}
+
+.minimize-menu {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.maximize-menu {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 @media (min-width: 768px) {
@@ -86,9 +153,43 @@ body {
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
-  #main-header nav[bottom-nav] button {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+  #main-header div button {
+    display: none;
+  }
+  #main-header nav[menu] {
+    position: relative !important;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    background-color: transparent !important;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  #main-header nav[menu] > ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 0 !important;
+  }
+  #main-header nav[menu] ul > li {
+    padding: 0.5rem !important;
+    border: none !important;
+  }
+  #main-header nav[menu] ul > li span,
+  #main-header nav[menu] ul > li a {
+    color: #000;
   }
 }
 /*# sourceMappingURL=home.css.map */
