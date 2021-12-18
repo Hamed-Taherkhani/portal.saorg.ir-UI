@@ -1,1 +1,94 @@
-/* No CSS *//*# sourceMappingURL=home.css.map */
+* {
+  -webkit-transition: 700ms ease;
+  transition: 700ms ease;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
+}
+
+#main-header nav[top-nav] {
+  border-bottom: 1px solid lightgray;
+}
+
+#main-header nav[top-nav] ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#main-header nav[top-nav] ul li {
+  margin: 0.7rem;
+}
+
+#main-header nav[top-nav] ul li a {
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: #808080;
+  border-left: 1px solid lightgray;
+  padding-left: 0.5rem;
+}
+
+#main-header nav[top-nav] ul li a:hover {
+  text-decoration: underline;
+}
+
+#main-header nav[top-nav] ul li:last-child a {
+  border-left: none;
+  padding-left: 0;
+}
+
+#main-header nav[bottom-nav] {
+  padding: 0 2rem;
+  background-color: #8dd6e3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main-header nav[bottom-nav] button {
+  border: none;
+  background: transparent;
+}
+
+@media (min-width: 768px) {
+  #main-header nav[top-nav] {
+    padding-right: 2rem;
+  }
+  #main-header nav[top-nav] ul {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  #main-header nav[bottom-nav] button {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+/*# sourceMappingURL=home.css.map */

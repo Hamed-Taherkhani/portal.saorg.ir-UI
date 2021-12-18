@@ -1,0 +1,18 @@
+$header-color: #8dd6e3;
+$header-text-color: #808080;
+
+@mixin flex($dir, $justify, $align) {
+  display: flex;
+
+  @if $dir !=null {
+    flex-direction: $dir;
+  }
+
+  @if $justify !=null {
+    justify-content: $justify;
+  }
+
+  @if ($align !=null) {
+    align-items: $align;
+  }
+}

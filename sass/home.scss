@@ -1,0 +1,71 @@
+@import "./config";
+
+* {
+  transition: 700ms ease;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  max-height: max-content;
+}
+
+#main-header {
+  & nav[top-nav] {
+    border-bottom: 1px solid lightgray;
+    ul {
+      @include flex(row, center, null);
+
+      li {
+        margin: 0.7rem;
+
+        a {
+          text-decoration: none;
+          font-size: 0.8rem;
+          color: $header-text-color;
+          border-left: 1px solid lightgray;
+          padding-left: 0.5rem;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        &:last-child a {
+          border-left: none;
+          padding-left: 0;
+        }
+      }
+    }
+  }
+
+  & nav[bottom-nav] {
+    padding: 0 2rem;
+    background-color: $header-color;
+    button {
+      border: none;
+      background: transparent;
+    }
+    @include flex(row, space-between, center);
+  }
+}
+
+// controlling each screen size:
+@media (min-width: 768px) {
+  #main-header {
+    & nav[top-nav] {
+      padding-right: 2rem;
+      ul {
+        justify-content: flex-start;
+      }
+    }
+    & nav[bottom-nav] button {
+      transform: scale(0);
+    }
+  }
+}
