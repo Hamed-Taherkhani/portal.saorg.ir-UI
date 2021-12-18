@@ -1,5 +1,8 @@
 $header-color: #8dd6e3;
 $header-text-color: #5a5a5a;
+$middle-tiles-icon-color: #d34a4a;
+$tiles-back-color: rgb(245, 245, 245);
+$news-tile-back-color: #4c8cf5;
 
 @mixin flex($dir, $justify, $align) {
   display: flex;

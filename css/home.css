@@ -27,6 +27,8 @@ body {
 
 #main-header nav[top-nav] {
   border-bottom: 1px solid lightgray;
+  background-color: #fff;
+  z-index: 10;
 }
 
 #main-header nav[top-nav] ul {
@@ -66,6 +68,7 @@ body {
 #main-header div {
   background-color: #8dd6e3;
   padding: 0 2rem;
+  z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -93,7 +96,7 @@ body {
   background-color: #fff;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 10;
 }
 
 #main-header div nav[menu] button[close-menu-btn] {
@@ -167,6 +170,7 @@ body {
   position: absolute;
   background-color: transparent;
   border: none;
+  z-index: 1;
 }
 
 #slider-container button[prev-slide] {
@@ -181,6 +185,165 @@ body {
 
 #slider-container .de-active {
   display: none;
+}
+
+#slider-container .fade {
+  -webkit-animation: fade 2s ease 0s;
+          animation: fade 2s ease 0s;
+}
+
+#middle-tiles {
+  padding: 2rem;
+}
+
+#middle-tiles > li {
+  position: relative;
+  min-height: 15rem;
+  background-color: whitesmoke;
+  border-radius: 25px;
+  margin: 2rem 0;
+}
+
+#middle-tiles > li header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#middle-tiles > li header h3 {
+  margin-top: 2.7rem;
+}
+
+#middle-tiles > li header .tiles-icons {
+  position: absolute;
+  top: -25px;
+  background-color: #d34a4a;
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#middle-tiles > li header .tiles-icons img {
+  width: 30px;
+}
+
+#middle-tiles:last-child div[news-ico] {
+  background-color: #4c8cf5;
+}
+
+#middle-tiles a {
+  text-decoration: none;
+  color: #000;
+  font-size: 0.8rem;
+}
+
+#middle-tiles ul {
+  padding: 2rem;
+}
+
+#middle-tiles ul li {
+  border-bottom: solid 1px lightgray;
+  padding: 1rem;
+  cursor: pointer;
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+}
+
+#middle-tiles ul li:hover {
+  background: -webkit-gradient(linear, right top, left top, color-stop(30%, #8dd6e3), color-stop(80%, whitesmoke));
+  background: linear-gradient(-90deg, #8dd6e3 30%, whitesmoke 80%);
+}
+
+#middle-tiles li[enroll] p {
+  padding: 2rem;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+}
+
+#middle-tiles li[enroll] div[buttons] {
+  padding: 0 0 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#middle-tiles li[enroll] div[buttons] button {
+  width: 7rem;
+  padding: 0.5rem 2rem;
+  margin: 0.2rem 0;
+  border-radius: 5px;
+  border: none;
+}
+
+#middle-tiles li[enroll] div[buttons] button a {
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+#middle-tiles li[enroll] div[buttons] button[enroll-btn] {
+  background-color: #ff8919;
+}
+
+#middle-tiles li[enroll] div[buttons] button[login-btn] {
+  background-color: #01c9ee;
+}
+
+#middle-tiles li[enroll] div[buttons] button[uni-user-login] {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: #ae5756;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media (min-width: 768px) {
@@ -229,6 +392,25 @@ body {
   #main-header nav[menu] ul > li span,
   #main-header nav[menu] ul > li a {
     color: #000;
+  }
+  #middle-tiles {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: base-line;
+        -ms-flex-align: base-line;
+            align-items: base-line;
+  }
+  #middle-tiles > li {
+    width: 33%;
+    margin: 1rem;
   }
 }
 /*# sourceMappingURL=home.css.map */
