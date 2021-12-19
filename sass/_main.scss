@@ -1,0 +1,144 @@
+@import "./config";
+
+// All mains elements styles comes here...
+#slider-container {
+  position: relative;
+  margin: 1rem;
+  @include flex(column, center, null);
+  .slides img {
+    width: 100%;
+  }
+  button {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    z-index: 1;
+    &[prev-slide] {
+      left: 0;
+      transform: rotate(180deg);
+    }
+  }
+
+  .active {
+    display: inline-block;
+  }
+  .de-active {
+    display: none;
+  }
+
+  .fade {
+    animation: fade 2s ease 0s;
+  }
+}
+
+#middle-tiles {
+  padding: 2rem;
+
+  & > li {
+    position: relative;
+    min-height: 15rem;
+    background-color: $tiles-back-color;
+    border-radius: 25px;
+    margin: 2rem 0;
+
+    header {
+      @include flex(column, center, center);
+
+      h3 {
+        margin-top: 2.7rem;
+      }
+      .tiles-icons {
+        position: absolute;
+        top: -25px;
+        background-color: $middle-tiles-icon-color;
+        border-radius: 50%;
+        width: 3.5rem;
+        height: 3.5rem;
+        @include flex(column, center, center);
+
+        img {
+          width: 30px;
+        }
+      }
+    }
+  }
+
+  &:last-child {
+    & div[news-ico] {
+      background-color: $news-tile-back-color;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: #000;
+    font-size: 0.8rem;
+  }
+
+  ul {
+    padding: 2rem;
+
+    li {
+      border-bottom: solid 1px lightgray;
+      padding: 1rem;
+      cursor: pointer;
+      transition: 200ms ease;
+
+      &:hover {
+        background: linear-gradient(
+          -90deg,
+          $header-color 30%,
+          $tiles-back-color 80%
+        );
+      }
+    }
+  }
+
+  & li[enroll] {
+    p {
+      padding: 2rem;
+      font-size: 0.8rem;
+      line-height: 1.5rem;
+    }
+
+    div[buttons] {
+      padding: 0 0 2rem;
+      @include flex(column, center, center);
+
+      button {
+        width: 7rem;
+        padding: 0.5rem 2rem;
+        margin: 0.2rem 0;
+        border-radius: 5px;
+        border: none;
+
+        a {
+          color: #fff;
+          font-size: 0.9rem;
+        }
+
+        &[enroll-btn] {
+          background-color: #ff8919;
+        }
+
+        &[login-btn] {
+          background-color: #01c9ee;
+        }
+
+        &[uni-user-login] {
+          width: max-content;
+          background-color: #ae5756;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
