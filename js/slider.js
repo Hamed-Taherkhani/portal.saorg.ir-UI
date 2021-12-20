@@ -1,10 +1,14 @@
 const slideContainer = document.getElementById("slider-container"),
   nextBtn = document.getElementById("next-slide-btn"),
   prevBtn = document.getElementById("prev-slide-btn"),
-  slides = document.getElementsByClassName("slides");
+  slides = document.getElementsByClassName("slides"),
+  slidesCount = document.querySelectorAll("#slide-count li div");
 
 const periodInterval = 10000;
 let interval = null;
+
+const unfocusColor = "rgb(209, 209, 209)",
+  focusColor = "rgb(122, 122, 122)";
 
 // Starts slider when body element was loaded.
 document.body.onload = () => slider();
@@ -23,17 +27,17 @@ prevBtn.onclick = () => {
 
 let index = 0;
 function changeSlide(dir) {
+  slides[index].classList.replace("active", "de-active");
+  slidesCount[index].style.background = unfocusColor;
   if (dir === "next") {
-    slides[index].classList.replace("active", "de-active");
     index++;
     index %= slides.length;
-    slides[index].classList.replace("de-active", "active");
   } else if (dir === "previous") {
-    slides[index].classList.replace("active", "de-active");
     index--;
     if (index < 0) index = slides.length - 1;
-    slides[index].classList.replace("de-active", "active");
   }
+  slides[index].classList.replace("de-active", "active");
+  slidesCount[index].style.background = focusColor;
 }
 
 function resetInterval() {

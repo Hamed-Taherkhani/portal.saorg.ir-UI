@@ -10,6 +10,8 @@ $footer-heading-color: #000;
 $footer-shadow-color: rgb(122, 122, 122);
 $footer-border-color: rgb(209, 209, 209);
 
+$slide-count-color: $footer-border-color;
+
 @mixin flex($dir, $justify, $align) {
   display: flex;
 
