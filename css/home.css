@@ -523,7 +523,7 @@ body {
   }
   #main-header nav[menu] {
     position: relative !important;
-    width: 100%;
+    width: 100% !important;
     -webkit-transform: scale(1);
             transform: scale(1);
     background-color: transparent !important;
